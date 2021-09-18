@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-
-
-
+import { Wrapper } from './LPstyle';
 
 type LandingPageProps = {
     toggleToLogin(): void,
@@ -17,10 +15,10 @@ export class LandingPage extends Component<LandingPageProps, LandingPageState> {
     render() {
         return (
            <div>
-               
+               <Wrapper>
                 <button onClick={this.props.toggleToLogin}>login</button>
                 <a onClick={this.props.toggleToRegister}>new here?</a>
-           
+                </Wrapper>
             </div>
 
         );

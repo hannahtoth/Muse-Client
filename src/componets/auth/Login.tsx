@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Wrapper} from './LoginStyle'
 
 
 type LoginProps = {
@@ -34,15 +35,19 @@ export class Login extends Component <LoginProps, LoginState> {
     render() {
         return(
          <div>
+             <Wrapper>
                 <h2>login</h2>
                 <form onSubmit={ this.handleSubmit }>
-                    <label>username</label>
+                    <label>username: </label>
                     <input required onChange={(e) => {this.props.setUsername(e.target.value)}}></input>
-                    <label>password</label>
+                    <br/>
+                    <label>password: </label>
                     <input required type="password" onChange={(e) => {this.props.setPassword(e.target.value)}}></input>
+                    <br />
                     <button type="submit">login</button>
                 </form>
                 <a onClick={this.props.toggleToRegister}>new here?</a>
+                </Wrapper>
                 </div>
         )
     }

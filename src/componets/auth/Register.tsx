@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Wrapper} from './LoginStyle'
 
 type RegisterProps = {
     email: string,
@@ -35,18 +36,25 @@ export class Register extends Component <RegisterProps, RegisterState> {
     render() {
         return(
            <div>
-                <h2>create</h2>
+               <Wrapper>
+            <h2>create</h2>
                 <form onSubmit={this.handleSubmit}>
-                    <label>email</label>
+                    <label>email: </label>
                     <input required onChange={(e) => {this.props.setEmail(e.target.value)}}></input>
-                    <label>username</label>
+                    <br></br>
+                    <label>username: </label>
                     <input required onChange={(e) => {this.props.setUsername(e.target.value)}}></input>
-                    <label>password</label>
+                    <br></br>
+                    <label>password: </label>
                     <input required onChange={(e) => {this.props.setPassword(e.target.value)}}></input>
-                    <label>confirm password</label>
-                    <button type="submit">sign up</button>
+                    <br></br>
+                    <label>confirm password: </label>
+                    <input required onChange={(e) => {this.props.setPassword(e.target.value)}}></input>
+                    <br></br>
                 </form>
+                <button type="submit">create</button>
                 <a onClick={this.props.toggleToLogin}>login?</a>
+                </Wrapper>
                 </div>
         )
     }
