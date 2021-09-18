@@ -30,5 +30,14 @@ export const Wrapper = styled.div`
         cursor: pointer;
 
     }
+    a {
+        margin: .5rem;
+        border: none;
+        border-radius: 10rem;
+        color:#083248;
+        font-size: 1.1em;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 500;
+        cu
 
 `;
