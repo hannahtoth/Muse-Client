@@ -1,18 +1,25 @@
+import React, { Component } from 'react';
 
-import React from 'react'
+ import { Wrapper } from './HeaderStyle';
 
 type HeaderProps = {
-    brand: string,
+    logout() : void,
 }
-// React.Component<Props, State>
-export class Header extends React.Component<HeaderProps, {}> {
-    render() {
-        const { brand } = this.props
 
-        return (
-            <nav>
-                <h1> { brand } </h1>
-            </nav>
+export class Header extends Component <HeaderProps, {}> {
+    constructor(props: HeaderProps) {
+        super(props);
+    }
+
+    render() {
+        return(
+         <div>
+             <Wrapper>
+                
+                <a onClick={this.props.logout}>Logout</a>
+                </Wrapper>
+                </div>
+                
         )
     }
 }

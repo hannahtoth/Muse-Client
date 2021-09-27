@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import { Portal } from './componets/auth';
 import { Header } from './common/Header'
+import { GalleryIndex } from './Gallery/GalleryIndex';
+import {ExhibitIndex} from './Exhibits/ExhibitIndex'
 
 type AppProps = {};
 type AppState = {
@@ -41,8 +43,10 @@ class App extends Component <AppProps, AppState> {
   render(){
     return (
       <div className="App">
-        <Header brand="Muse"/> 
+        <Header logout={this.clearToken} /> 
         <Portal updateToken={this.updateToken} />
+        <GalleryIndex sessionToken={this.state.sessionToken} />
+        <ExhibitIndex />
 
       </div>
      

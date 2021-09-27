@@ -8,7 +8,8 @@ type LandingPageProps = {
 type LandingPageState = {}
 
 export class LandingPage extends Component<LandingPageProps, LandingPageState> {
-    constructor(props: LandingPageProps) {
+    constructor(props: LandingPageProps)
+     {
         super(props);
     }
     

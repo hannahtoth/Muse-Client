@@ -8,13 +8,14 @@ export const Wrapper = styled.div`
     align-items: right;
     justify-content: center;
     font-family: 'Work Sans', sans-serif;
-    padding-top: 1em;
+    padding-top: 2em;
     margin-left: 1em;
     background-image: url(${img});
     background-size: cover;
     background-position: left;
     min-height: 100vh;
     min-width: 100vw;
+    max-width: 100%,
     padding: 1em;
 
     button {
@@ -44,7 +45,7 @@ export const Wrapper = styled.div`
         font-family: 'Work Sans', sans-serif;
         font-size: 0.8em;
         font-weight: 500;
-        color: #083248;;
+        color: #083248;
     }
 
     a {

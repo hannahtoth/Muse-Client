@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Wrapper} from './LoginStyle'
 
-
 type LoginProps = {
     username: string,
     password: string,
@@ -24,7 +23,10 @@ export class Login extends Component <LoginProps, LoginState> {
         e.preventDefault();
         fetch("http://localhost:3000/user/login", {
             method: 'POST',
-            body: JSON.stringify({ user: { username: this.props.username, password: this.props.password } }),
+            body: JSON.stringify({ user: 
+                { username: this.props.username,
+                  password: this.props.password } 
+                }),
             headers: new Headers({
                 'Content-Type': 'application/json'
             })
@@ -52,3 +54,4 @@ export class Login extends Component <LoginProps, LoginState> {
         )
     }
 }
+

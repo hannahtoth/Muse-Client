@@ -6,7 +6,7 @@ import { Register } from './Register';
 type PortalProps = {
     updateToken(newToken: string): void,
 }
-type PortalState = {
+ type PortalState = {
     showLandingPage: boolean,
     showLogin: boolean,
     showRegister: boolean,
@@ -63,16 +63,16 @@ export class Portal extends Component<PortalProps, PortalState> {
                             setPassword={this.setPassword}
                         />
                         : <Register 
-                            email={this.state.email}
-                            username={this.state.username} 
-                            password={this.state.password}
-                            cPassword={this.state.cPassword}
+                            // email={this.state.email}
+                            // username={this.state.username} 
+                            // password={this.state.password}
+                            // cPassword={this.state.cPassword}
                             toggleToLogin={this.toggleToLogin} 
                             updateToken={this.props.updateToken}
-                            setUsername={this.setUsername}
-                            setPassword={this.setPassword}
-                            setEmail={this.setEmail}
-                            setCPassword={this.setCPassword}
+                            // setUsername={this.setUsername}
+                            // setPassword={this.setPassword}
+                            // setEmail={this.setEmail}
+                            // setCPassword={this.setCPassword}
                            
                         />
                 }
