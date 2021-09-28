@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Portal } from './componets';
+import { Portal } from './componets/auth/Portal';
 import { Header } from './common/Header'
+import { Link, Switch, Route, Redirect } from 'react-router-dom';
 
 
 type AppProps = {};
@@ -30,7 +31,6 @@ class App extends Component <AppProps, AppState> {
     this.setState({
       sessionToken: newToken,
     });
-    console.log(this.state.sessionToken)
   }
 
   clearToken = () => {
@@ -42,8 +42,10 @@ class App extends Component <AppProps, AppState> {
   render(){
     return (
       <div className="App">
-        <Header logout={this.clearToken} /> 
-        <Portal updateToken={this.updateToken} />
+        <Header logout={this.clearToken} updateToken={this.updateToken} token={this.state.sessionToken} /> 
+        <Route exact path="/">
+            <Portal updateToken={this.updateToken} sessionToken={this.state.sessionToken} />
+          </Route>
      
 
       </div>

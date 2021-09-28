@@ -2,14 +2,17 @@ import React, { Component } from 'react';
 import { LandingPage } from './LandingPage';
 import { Login } from './Login';
 import { Register } from './Register';
+import {ExhibitIndex} from '../Exhibits/ExhibitIndex'
 
 type PortalProps = {
     updateToken(newToken: string): void,
+    sessionToken: string | null,
 }
  type PortalState = {
     showLandingPage: boolean,
     showLogin: boolean,
     showRegister: boolean,
+    showExhibitIndex: boolean,
     email: string,
     username: string,
     password: string,
@@ -24,6 +27,7 @@ export class Portal extends Component<PortalProps, PortalState> {
             showLandingPage: true,
             showLogin: false,
             showRegister: false,
+            showExhibitIndex: true,
             email: '',
             username: '',
             password: '',
@@ -32,11 +36,21 @@ export class Portal extends Component<PortalProps, PortalState> {
         }
     };
 
+    toggleToExhibitIndex = () => {
+        this.setState({
+            showLandingPage: false,
+            showLogin:false,
+            showRegister: false,
+            showExhibitIndex: true,
+        })
+    }
+
     toggleToLogin = () => {
         this.setState({
             showLandingPage: false,
             showLogin: true,
             showRegister: false,
+            showExhibitIndex: true
         })
     };
 
@@ -58,6 +72,7 @@ export class Portal extends Component<PortalProps, PortalState> {
                             username={this.state.username} 
                             password={this.state.password}
                             toggleToRegister={this.toggleToRegister} 
+                            toggleToExhibitView={this.toggleToExhibitIndex}
                             updateToken={this.props.updateToken}
                             setUsername={this.setUsername}
                             setPassword={this.setPassword}
@@ -73,8 +88,10 @@ export class Portal extends Component<PortalProps, PortalState> {
                             // setPassword={this.setPassword}
                             // setEmail={this.setEmail}
                             // setCPassword={this.setCPassword}
-                           
+        
                         />
+                        
+                       
                 }
             </div>
         )

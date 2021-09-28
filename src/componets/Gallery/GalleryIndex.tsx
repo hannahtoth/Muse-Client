@@ -179,6 +179,7 @@ import { Link, Redirect } from "react-router-dom";
 import { Card, Button } from "react-bootstrap";
 import GalleryEdit from './GalleryEdit';
 
+
 type Props = {
   token: string;
   updateToken(newToken: string): void;

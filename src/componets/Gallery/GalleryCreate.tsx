@@ -74,6 +74,7 @@
 import { Component } from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import { Link, Redirect } from "react-router-dom";
+import {ExhibitIndex} from '../Exhibits/ExhibitIndex'
 
 type Props = {
   token: string;
@@ -156,6 +157,7 @@ class GalleryCreate extends Component<Props, State> {
     return (
       <div>
         <Form className="Form-Style" onSubmit={this.onSubmit}>
+            <ExhibitIndex />
           <FormGroup>
             <Label for="exhibitName"></Label>
             <Input

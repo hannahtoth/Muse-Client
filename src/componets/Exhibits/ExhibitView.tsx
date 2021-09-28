@@ -7,7 +7,7 @@ export class ExhibitView extends Component <{}, {}> {
     render() {
         return(
             <div>
-             
+             <ExhibitIndex />
             </div>
         )
     }

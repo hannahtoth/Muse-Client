@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 
 type HeaderProps = {
     logout() : void,
+    updateToken(newToken: string): void,
+    token: string | null,
 }
 
 export class Header extends Component <HeaderProps, {}> {

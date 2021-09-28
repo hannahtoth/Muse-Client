@@ -5,6 +5,7 @@ import {
   Route,
   Switch,
   Redirect,
+  Link
 } from "react-router-dom";
 import { ExhibitIndex } from "../Exhibits/ExhibitIndex";
 
@@ -25,12 +26,18 @@ export class LandingPage extends Component<LandingPageProps, LandingPageState> {
     return (
       <div>
         <Wrapper>
-          <button onClick={this.props.toggleToLogin}>login</button>
+        <button onClick={this.props.toggleToLogin}>login</button>
+        <a onClick={this.props.toggleToRegister}>new here?</a>
 
-          <a onClick={this.props.toggleToRegister}>new here?</a>
+        <ExhibitIndex />
+        
         </Wrapper>
+       
 
       </div>
     );
   }
 }
+
+
+ 

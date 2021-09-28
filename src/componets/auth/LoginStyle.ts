@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import img from './assets/logo.png'
 
+
 export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -15,7 +16,7 @@ export const Wrapper = styled.div`
     background-position: left;
     min-height: 100vh;
     min-width: 100vw;
-    max-width: 100%,
+    max-width:
     padding: 1em;
 
     button {

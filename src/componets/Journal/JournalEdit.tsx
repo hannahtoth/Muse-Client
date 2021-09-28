@@ -47,6 +47,7 @@ class JournalEdit extends Component<Props, State> {
         //   url: this.state.journal.url,
         //   description: this.state.journal.description,
         //   userId: this.state.journal.userId,
+
         // },
       }),
       headers: new Headers({
