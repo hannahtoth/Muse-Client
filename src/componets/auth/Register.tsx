@@ -35,7 +35,7 @@ export class Register extends Component<RegisterProps, RegisterState> {
     e.preventDefault();
     fetch("http://localhost:3000/user/register", {
       method: "POST",
-      headers: {"Content-Type" : "application/json"},
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         user: {
           email: this.state.email,

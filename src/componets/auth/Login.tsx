@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Redirect, Link } from 'react-router-dom'
+import { ExhibitIndex } from '../Exhibits/ExhibitIndex';
 import {Wrapper} from './LoginStyle'
 
 type LoginProps = {
@@ -33,8 +35,9 @@ export class Login extends Component <LoginProps, LoginState> {
         }).then(res => res.json())
         .then(data => {this.props.updateToken(data.sessionToken)})
     };
-
-    render() {
+    render() 
+    
+    {
         return(
          <div>
              <Wrapper>

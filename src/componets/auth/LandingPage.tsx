@@ -1,27 +1,36 @@
-import React, { Component } from 'react';
-import { Wrapper } from './LPstyle';
+import React, { Component } from "react";
+import { Wrapper } from "./LPstyle";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
+import { ExhibitIndex } from "../Exhibits/ExhibitIndex";
 
 type LandingPageProps = {
-    toggleToLogin(): void,
-    toggleToRegister(): void,
-}
-type LandingPageState = {}
+  toggleToLogin(): void;
+  toggleToRegister(): void;
+};
+type LandingPageState = {};
 
 export class LandingPage extends Component<LandingPageProps, LandingPageState> {
-    constructor(props: LandingPageProps)
-     {
-        super(props);
-    }
-    
-    render() {
-        return (
-           <div>
-               <Wrapper>
-                <button onClick={this.props.toggleToLogin}>login</button>
-                <a onClick={this.props.toggleToRegister}>new here?</a>
-                </Wrapper>
-            </div>
+  constructor(props: LandingPageProps) {
+    super(props);
+  }
 
-        );
-    };
-};
+  render()
+
+   {
+    return (
+      <div>
+        <Wrapper>
+          <button onClick={this.props.toggleToLogin}>login</button>
+
+          <a onClick={this.props.toggleToRegister}>new here?</a>
+        </Wrapper>
+
+      </div>
+    );
+  }
+}
