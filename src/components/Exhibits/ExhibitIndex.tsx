@@ -1,9 +1,7 @@
-import { assertTSAnyKeyword } from "@babel/types";
-import { ImageOutlined } from "@mui/icons-material";
+
 import React, { Component } from "react";
 import { Wrapper } from "./ExhibitStyle";
 import { Content } from "./ExhibitStyle";
-
 import { ExhibitView } from "./ExhibitView";
 type artAPI = {
   exhibitName: string;
@@ -115,7 +113,6 @@ export class ExhibitIndex extends Component<{}, ExhibitIndexState> {
 
           {/* <button onClick={()=> console.info(this.state)}>Check Exhibit Index State</button> */}
 
-          <ExhibitView />
         </Wrapper>
       </div>
     );

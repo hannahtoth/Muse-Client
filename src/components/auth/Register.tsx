@@ -54,7 +54,7 @@ export class Register extends Component<RegisterProps, RegisterState> {
   render() {
     return (
       <div>
-        <Wrapper>
+         <Wrapper> 
           <h2>create</h2>
           <form onSubmit={this.handleSubmit}>
             <label>email: </label>
@@ -92,7 +92,7 @@ export class Register extends Component<RegisterProps, RegisterState> {
             <button type="submit">create</button>
           </form>
           <a onClick={this.props.toggleToLogin}>login?</a>
-        </Wrapper>
+         </Wrapper> 
       </div>
     );
   }

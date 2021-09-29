@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import img from '../assets/logo.png'
 
-import img from './assets/logo.png'
+
 
 
 export const Wrapper = styled.div`
