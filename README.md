@@ -9,4 +9,4 @@ This app utilizes React, Typescript, HTML, CSS, Styled-component, and React-rout
 
 You can view the repository for the server of this app at https://github.com/hannahtoth/Muse-Server
 
-The deployed app can be viewed at 
+The deployed app can be viewed at https://herokuapp.com/ef-muse.com
