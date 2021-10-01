@@ -4,8 +4,8 @@ switch(window.location.hostname){
     case 'localhost' || '127.0.0.1':
     APIURL = 'http:localhost:3001';
     break;
-    case 'heroku.com/efa-muse.git':
-    APIURL = 'https://git.heroku.com/ef-muse.git'
+    case 'efa-muse.herokuapp.com':
+    APIURL = 'https://herokuapp.com/ef-muse.com'
 }
 
 export default APIURL;
