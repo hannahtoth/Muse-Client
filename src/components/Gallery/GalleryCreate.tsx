@@ -2,6 +2,7 @@ import { Component } from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import { Link, Redirect } from "react-router-dom";
 import { ExhibitIndex } from "../Exhibits/ExhibitIndex";
+import APIURL from '../helpers/environment'
 
 type Props = {
   token: string;
@@ -50,7 +51,7 @@ class GalleryCreate extends Component<Props, State> {
       navRedirect: true,
     });
 
-    fetch("http://localhost:3000/gallery/create", {
+    fetch(`${APIURL}/gallery/create`, {
       method: "POST",
       body: JSON.stringify({
         gallery: {

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { Card, Button } from "react-bootstrap";
 import JournalEdit from './JournalEdit';
+import APIURL from '../helpers/environment'
 
 type Props = {
   token: string;
@@ -42,7 +43,7 @@ class JournalIndex extends Component<Props, State> {
   }
 
   displayJournalData = () => {
-    fetch("http://localhost:3000/journal/myjournal", {
+    fetch(`${APIURL}/journal/myjournal`, {
       method: "GET",
       headers: new Headers({
         "Content-Type": "application/json",

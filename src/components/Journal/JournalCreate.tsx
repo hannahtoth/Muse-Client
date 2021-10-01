@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import { Link, Redirect } from "react-router-dom";
+import APIURL from '../helpers/environment'
 
 type Props = {
   token: string;
@@ -55,7 +56,7 @@ class JournalCreate extends Component<Props, State> {
       navRedirect: true,
     });
 
-    fetch("http://localhost:3000/journal/create", {
+    fetch(`${APIURL}/journal/create`, {
       method: "POST",
       body: JSON.stringify({
         journal: {

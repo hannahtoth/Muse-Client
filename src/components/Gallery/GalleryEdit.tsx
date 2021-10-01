@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import { Form, Label, FormGroup, Input, Button } from "reactstrap";
+import APIURL from '../helpers/environment'
 
 type Props = {
   token: string;
@@ -35,7 +36,7 @@ class GalleryEdit extends Component<Props, State> {
       navRedirect: true,
     });
 
-    fetch(`http://localhost:3000/gallery/update/${this.props.gallery.id} `, {
+    fetch(`${APIURL}gallery/update/${this.props.gallery.id} `, {
       method: "PUT",
       body: JSON.stringify({
         // gallery: {

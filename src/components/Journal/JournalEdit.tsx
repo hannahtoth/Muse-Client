@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import { Form, Label, FormGroup, Input, Button } from "reactstrap";
+import APIURL from '../helpers/environment'
 
 type Props = {
   token: string;
@@ -37,7 +38,7 @@ class JournalEdit extends Component<Props, State> {
       navRedirect: true,
     });
 
-    fetch(`http://localhost:3000/journal/update/${this.props.journal.id} `, {
+    fetch(`${APIURL}/journal/update/${this.props.journal.id} `, {
       method: "PUT",
       body: JSON.stringify({
         // journal: {

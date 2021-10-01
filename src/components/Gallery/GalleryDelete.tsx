@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Redirect, Link } from "react-router-dom";
+import APIURL from '../helpers/environment'
 
 type Props = {
   token: string;
@@ -27,7 +28,7 @@ class GalleryDelete extends Component<Props, {}> {
   }
 
   onDelete = () => {
-    fetch(`http://localhost:3000/gallery/delete/${this.props.gallery.id}`, {
+    fetch(`${APIURL}/gallery/delete/${this.props.gallery.id}`, {
       method: "DELETE",
       headers: new Headers({
         "Content-Type": "application/json",

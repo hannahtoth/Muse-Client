@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Wrapper } from "./LoginStyle";
+import APIURL from '../helpers/environment'
 
 type RegisterProps = {
   // email: string,
@@ -33,7 +34,7 @@ export class Register extends Component<RegisterProps, RegisterState> {
 
   handleSubmit = (e: React.FormEvent): void => {
     e.preventDefault();
-    fetch("http://localhost:3000/user/register", {
+    fetch(`${APIURL}/user/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

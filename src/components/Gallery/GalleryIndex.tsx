@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { Card, Button } from "react-bootstrap";
 import GalleryEdit from "./GalleryEdit";
+import APIURL from '../helpers/environment'
 
 type Props = {
   token: string;
@@ -40,7 +41,7 @@ class GalleryIndex extends Component<Props, State> {
   }
 
   displayGalleryData = () => {
-    fetch("http://localhost:3000/gallery/mygallery", {
+    fetch(`${APIURL}/gallery/mygallery`, {
       method: "GET",
       headers: new Headers({
         "Content-Type": "application/json",

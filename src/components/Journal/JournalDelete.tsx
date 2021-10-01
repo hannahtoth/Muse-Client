@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Redirect, Link } from "react-router-dom";
+import APIURL from '../helpers/environment'
 
 type Props = {
   token: string;
@@ -31,7 +32,7 @@ class JournalDelete extends Component<Props, {}> {
   }
 
   onDelete = () => {
-    fetch(`http://localhost:3000/journal/delete/${this.props.journal.id}`, {
+    fetch(`${APIURL}/journal/delete/${this.props.journal.id}`, {
       method: "DELETE",
       headers: new Headers({
         "Content-Type": "application/json",
