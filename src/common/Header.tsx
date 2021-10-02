@@ -16,10 +16,10 @@ export class Header extends Component<HeaderProps, {}> {
   render() {
     return (
       <div>
-        <Wrapper>
-        <button>  
+          <Wrapper>
+        <button>
           <a onClick={this.props.logout}>Logout</a>
-          </button>
+        </button>
         </Wrapper>
       </div>
     );
